@@ -1,17 +1,17 @@
-apiVersion: apps/v1        # which Kubernetes API handles this
-kind: Deployment           # what type of object this is
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: nginx              # name of this deployment
-  namespace: default       # which namespace to deploy into
+  name: nginx
+  namespace: default
 spec:
-  replicas: 1              # how many pod copies to run
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx           # deployment manages pods with this label
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginx         # label applied to every pod created
+        app: nginx
     spec:
       containers:
       - name: nginx

@@ -5,8 +5,8 @@ metadata:
   namespace: default
 spec:
   selector:
-    app: nginx       # routes traffic to pods with this label
+    app: nginx
   ports:
-  - port: 80         # port the service listens on
-    targetPort: 80   # port on the pod to forward to
-  type: ClusterIP    # only reachable inside the cluster
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
