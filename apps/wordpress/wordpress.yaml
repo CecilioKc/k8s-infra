@@ -34,10 +34,6 @@ spec:
             secretKeyRef:
               name: wordpress-secret
               key: mysql-password
-        - name: WORDPRESS_CONFIG_EXTRA
-          value: |
-            define('WP_HOME', 'http://148.113.196.5:31393');
-            define('WP_SITEURL', 'http://148.113.196.5:31393')
         ports:
         - containerPort: 80
         volumeMounts:
